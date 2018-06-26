@@ -22,8 +22,8 @@ If you want to use with persistent data:
 ## usage
 
 First you must signup at least two users<br>
-`POST localhost:8080/singup`
-`DATA {
+`POST localhost:8080/singup`<br>
+`data: {
 	"email": "test1@domain.com",
 	"password": "12345678"
 }`
@@ -36,11 +36,11 @@ To verify the user the API cal is: <br>
 If you want to get the token in the logs of node, or directly you can set the attribute `verified` to true in the database transaction, collection users<br>
 <br>
 A user must be logged in, in order to get the balance or to make a transaction.<br>
-`POST localhost/login`
-`DATA {
+`POST localhost/login`<br>
+`data: {
 	"email": "test1@domain.com",
 	"password": "12345678"
-}`
+}`<br>
 <br>
 You can check if tehre is a user logged in with:<br>
 `GET localhost/login`<br>
@@ -52,4 +52,6 @@ It returna  JSON object with the balance.<br>
 For making a transaction between two users<br>
 `POST /loclahost:8080/user/:idUserSource/transfer/:amount/to/:idUserDestination`<br>
 <br>
-
+For logout the user<br>
+`GET /loclahost:8080/logout`<br>
+<br>
