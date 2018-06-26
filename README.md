@@ -18,3 +18,38 @@ Currently the database is not setup with a volume, so the data is not persistent
 If you want to use with persistent data:
 1. Uncomment the lines in the docker-compose file for tyhe service mongo_db
 2. create the folder /mongo/data with the write permissions in order to write on it from the docker image.
+
+## usage
+
+First you must signup at least two users<br>
+`POST localhost:8080/singup`
+`DATA {
+	"email": "test1@domain.com",
+	"password": "12345678"
+}`
+<br>
+The sign up process must send an email witha  toekn to the email specified by the user. If you don't receive it you can get new token to authenticate using:<br>
+`GET localhost:8080/renewtoken/:email`<br>
+<br>
+To verify the user the API cal is: <br>
+`GET localhost:8080/verifyProfile?token=token_received_in_the_email`<br>
+If you want to get the token in the logs of node, or directly you can set the attribute `verified` to true in the database transaction, collection users<br>
+<br>
+A user must be logged in, in order to get the balance or to make a transaction.<br>
+`POST localhost/login`
+`DATA {
+	"email": "test1@domain.com",
+	"password": "12345678"
+}`
+<br>
+You can check if tehre is a user logged in with:<br>
+`GET localhost/login`<br>
+<br>
+For getting the balance:<br>
+`GET localhost/user/:idUSer/balance`<br>
+It returna  JSON object with the balance.<br>
+<br>
+For making a transaction between two users<br>
+`POST /loclahost:8080/user/:idUserSource/transfer/:amount/to/:idUserDestination`<br>
+<br>
+
