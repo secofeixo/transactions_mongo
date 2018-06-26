@@ -29,7 +29,7 @@ module.exports = function(app, passport) {
 	});
 
 	// *************************************
-	// PROFILE/TRANSLATE
+	// PROFILE/TRANSACTION
 	// *************************************
 
 	app.get('/profile', isLoggedIn, ctrlUser.getProfile)
