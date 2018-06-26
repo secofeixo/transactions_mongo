@@ -11,7 +11,7 @@ logger.info('Create mongo connection');
 
 mongoose.main_conn.on('error', err => {
   if (err) {
-    throw new Error('Could not connect with MongoDB database. goldenspear');
+    throw new Error('Could not connect with MongoDB database');
   }
 });
 
