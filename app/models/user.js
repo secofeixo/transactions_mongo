@@ -7,13 +7,13 @@ const mongoose = require('mongoose'),
 // define the schema for our user model
 var userSchema = mongoose.Schema({
   email: {
-  	type: String,
-  	unique: true,
+    type: String,
+    unique: true,
   },
   password: String,
   verified: {
-  	type: Boolean,
-  	default: false,
+    type: Boolean,
+    default: false,
   },
   token: String,
   balance: {

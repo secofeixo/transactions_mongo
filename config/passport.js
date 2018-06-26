@@ -38,8 +38,8 @@ module.exports = function(passport) {
     passReqToCallback : true // allows us to pass back the entire request to the callback
   },
   (req, email, password, done) => {
-  	// find a user whose email is the same as the forms email
-  	// we are checking to see if the user trying to login already exists
+    // find a user whose email is the same as the forms email
+    // we are checking to see if the user trying to login already exists
     User.findOne({ 'email' :  email }, (err, user) => {
       logger.info(`passport local-signup ${err}`);
       logger.info(`passport local-signup ${JSON.stringify(user)}`);

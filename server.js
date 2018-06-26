@@ -3,20 +3,20 @@
 // set up ======================================================================
 // get all the tools we need
 const express = require('express'),
-	app = express(),
-	port = process.env.PORT || 8080,
-	mongoose = require('./config/mongoose'),
-	passport = require('passport'),
-	flash = require('connect-flash'),
-	session = require('express-session'),
-	SessionMongoStore = require('connect-mongo')(session),
-	helmet = require('helmet'),
-	bodyParser = require('body-parser'),
-	compression = require('compression'),
-	methodOverride = require('method-override'),
-	path = require('path'),
-	configDB = require('./config/database.js'),
-	logger = require('./app/controllers/log.controller.js');
+  app = express(),
+  port = process.env.PORT || 8080,
+  mongoose = require('./config/mongoose'),
+  passport = require('passport'),
+  flash = require('connect-flash'),
+  session = require('express-session'),
+  SessionMongoStore = require('connect-mongo')(session),
+  helmet = require('helmet'),
+  bodyParser = require('body-parser'),
+  compression = require('compression'),
+  methodOverride = require('method-override'),
+  path = require('path'),
+  configDB = require('./config/database.js'),
+  logger = require('./app/controllers/log.controller.js');
 
 // configuration ===============================================================
 

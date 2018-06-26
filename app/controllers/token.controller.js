@@ -1,6 +1,6 @@
 const jwt = require('jwt-simple'),
-	moment = require('moment'),
-	config = require('../../config/token.js');
+  moment = require('moment'),
+  config = require('../../config/token.js');
 
 function createToken(user) {
   const payload = {
@@ -12,5 +12,5 @@ function createToken(user) {
 };
 
 module.exports = {
-	createToken
+  createToken
 }
