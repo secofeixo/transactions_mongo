@@ -6,21 +6,21 @@ const mongoose = require('mongoose'),
 
 // define the schema for our user model
 var userSchema = mongoose.Schema({
-    email: {
-    	type: String,
-    	unique: true,
-    },
-    password: String,
-    verified: {
-    	type: Boolean,
-    	default: false,
-    },
-    token: String,
-    balance: {
-        type: Number,
-        default: 0
-    },
-    pendingTransactions: [ Schema.ObjectId ],
+  email: {
+  	type: String,
+  	unique: true,
+  },
+  password: String,
+  verified: {
+  	type: Boolean,
+  	default: false,
+  },
+  token: String,
+  balance: {
+    type: Number,
+    default: 0
+  },
+  pendingTransactions: [ Schema.ObjectId ],
 });
 
 // generating a hash

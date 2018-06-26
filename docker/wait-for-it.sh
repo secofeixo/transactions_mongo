@@ -7,7 +7,7 @@ echoerr() { if [[ $QUIET -ne 1 ]]; then echo "$@" 1>&2; fi }
 
 usage()
 {
-    cat << USAGE >&2
+  cat << USAGE >&2
 Usage:
     $cmdname host:port [-s] [-t timeout] [-- command args]
     -h HOST | --host=HOST       Host or IP under test
