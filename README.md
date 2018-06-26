@@ -28,12 +28,12 @@ First you must signup at least two users<br>
 	"password": "12345678"
 }`
 <br>
-The sign up process must send an email witha  toekn to the email specified by the user. If you don't receive it you can get new token to authenticate using:<br>
+The sign up process must send an email with a token to the email specified by the user. If you don't receive it you can get new token to authenticate using:<br>
 `GET localhost:8080/renewtoken/:email`<br>
 <br>
 To verify the user the API cal is: <br>
 `GET localhost:8080/verifyProfile?token=token_received_in_the_email`<br>
-If you want to get the token in the logs of node, or directly you can set the attribute `verified` to true in the database transaction, collection users<br>
+You can get the token in the logs of node if there is any problem sending the email with the otken, or directly you can set the attribute `verified` to true in the collection users of database transaction<br>
 <br>
 A user must be logged in, in order to get the balance or to make a transaction.<br>
 `POST localhost:8080/login`<br>
@@ -42,12 +42,12 @@ A user must be logged in, in order to get the balance or to make a transaction.<
 	"password": "12345678"
 }`<br>
 <br>
-You can check if tehre is a user logged in with:<br>
+You can check if there is a user logged in with:<br>
 `GET localhost:8080/login`<br>
 <br>
 For getting the balance:<br>
-`GET localhost:8080/user/:idUSer/balance`<br>
-It returna  JSON object with the balance.<br>
+`GET localhost:8080/user/:idUser/balance`<br>
+It returns a JSON object with the balance.<br>
 <br>
 For making a transaction between two users<br>
 `POST loclahost:8080/user/:idUserSource/transfer/:amount/to/:idUserDestination`<br>
