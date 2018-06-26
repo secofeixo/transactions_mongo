@@ -1,0 +1,8 @@
+{
+  "name": "transaction",
+  "script": "server.js",
+  "instances": "2",
+  "env": {
+    "PORT": 8080,
+  }
+}
