@@ -50,8 +50,8 @@ For getting the balance:<br>
 It returns a JSON object with the balance.<br>
 <br>
 For making a transaction between two users<br>
-`POST loclahost:8080/user/:idUserSource/transfer/:amount/to/:idUserDestination`<br>
+`POST localhost:8080/user/:idUserSource/transfer/:amount/to/:idUserDestination`<br>
 <br>
 For logout the user<br>
-`GET loclahost:8080/logout`<br>
+`GET localhost:8080/logout`<br>
 <br>
