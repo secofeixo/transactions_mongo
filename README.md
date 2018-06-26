@@ -12,7 +12,9 @@ Code creating a simple api for making transaction between users using a mongo da
 
 ## Docker
 
-You can use it with docker, running `docker-compose up --build`.
-It will create the docker image for the node server, and then run the two images of the docker-compose file.
-Currently the database is not setup with a volume, so the data is not persistent. 
-If you want to use with persistent data, uncomment the lines in the docker-compose file for tyhe service mongo_db, and create the folder /mongo/data with the permissions in order to write on them from the docker image.
+You can use it with docker, running `docker-compose up --build`.<br>
+It will create the docker image for the node server, and then run the two images of the docker-compose file.<br>
+Currently the database is not setup with a volume, so the data is not persistent. <br>
+If you want to use with persistent data:
+1. Uncomment the lines in the docker-compose file for tyhe service mongo_db
+2. create the folder /mongo/data with the write permissions in order to write on it from the docker image.
