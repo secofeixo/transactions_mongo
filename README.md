@@ -17,9 +17,9 @@ It will create the docker image for the node server, and then run the two images
 Currently the database is not setup with a volume, so the data is not persistent. <br>
 If you want to use with persistent data:
 1. Uncomment the lines in the docker-compose file for tyhe service mongo_db
-2. create the folder /mongo/data with the write permissions in order to write on it from the docker image.
+2. Create the folder /mongo/data with the write permissions in order to write on it from the docker image.
 
-## usage
+## Usage
 
 First you must signup at least two users<br>
 `POST localhost:8080/signup`<br>
