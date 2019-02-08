@@ -10,7 +10,7 @@
   "author": "Alberto Seco",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^2.0.1",
+    "bcrypt": "^3.0.4",
     "body-parser": "^1.18.2",
     "compression": "^1.7.2",
     "connect-flash": "^0.1.1",
@@ -22,7 +22,7 @@
     "jwt-simple": "^0.5.1",
     "method-override": "^2.3.10",
     "moment": "^2.20.1",
-    "mongoose": "^5.0.6",
+    "mongoose": "^5.4.3",
     "morgan": "^1.9.0",
     "nodemailer": "^4.6.0",
     "passport": "^0.4.0",
