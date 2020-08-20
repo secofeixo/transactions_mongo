@@ -10,7 +10,7 @@
   "author": "Alberto Seco",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.4",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.18.2",
     "compression": "^1.7.2",
     "connect-flash": "^0.1.1",
